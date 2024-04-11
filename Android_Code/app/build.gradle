@@ -35,3 +35,11 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 }
+
+dependencies {
+    // Dependência do Firebase Bom
+    implementation 'com.google.firebase:firebase-bom:30.0.0'
+
+    // Dependência do Firebase Storage
+    implementation 'com.google.firebase:firebase-storage:20.0.0'
+}
