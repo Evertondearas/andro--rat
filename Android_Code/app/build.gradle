@@ -1,5 +1,8 @@
-apply plugin: 'com.android.application'
-
+//apply plugin: 'com.android.application'
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google.services'
+}
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -34,12 +37,14 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
-}
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:32.8.0')
 
-dependencies {
-    // Dependência do Firebase Bom
-    implementation 'com.google.firebase:firebase-bom:30.0.0'
+    // TODO: Add the dependencies for Firebase products you want to use
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation 'com.google.firebase:firebase-analytics'
 
-    // Dependência do Firebase Storage
+ // do Firebase Storage
     implementation 'com.google.firebase:firebase-storage:20.0.0'
+
 }
